@@ -4378,4 +4378,10 @@ input:checked + .toggle:before {
 	font-size: 0.8rem;
 }
 
+/* ---------------- <base target="_blank">  CSS "黑客"（不推荐但有趣）---------------- */
+a[href^="http"]:not([href*="yourdomain.com"]):after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0 0 0 5px;
+}
+
 /* ------------ End of Tips---------- */
