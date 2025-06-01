@@ -1817,6 +1817,25 @@
     <div id="menuButton"></div>
     <!-- ending-of-body -->
 
+    <!--   JavaScript  target="_blank"  -->
+     <script>
+  function setLinksToBlank() {
+    document.querySelectorAll('a[href]:not([target="_blank"])').forEach(link => {
+      if (!/^(javascript:|mailto:|tel:|#)/.test(link.href)) {
+        link.target = '_blank';
+        link.rel = link.rel ? link.rel + ' noopener' : 'noopener';
+      }
+    });
+  }
+
+  // 初始设置
+  setLinksToBlank();
+  
+  // 监听动态内容变化（可选）
+  const observer = new MutationObserver(setLinksToBlank);
+  observer.observe(document.body, { childList: true, subtree: true });
+</script>
+ <!--   JavaScript  target="_blank"  -->
 </body>
        <!-- ------copyright ----------- -->
   <!--  https://github.com/XengShi/materialYouNewTab   -->
