@@ -9,8 +9,8 @@
 // Translation data
 const translations = {
     en: en, // English
-    pt: pt, // Portuguese-BR (Brazil)
     zh: zh, // Chinese (Simplified)
+    pt: pt, // Portuguese-BR (Brazil)
     zh_TW: zh_TW, // Chinese (Traditional)
     hi: hi, // Hindi
     hu: hu, // Hungarian
