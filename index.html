@@ -1,4 +1,4 @@
-F<!--
+<!--
      Material You NewTab
      Copyright (c) 2023-2025 XengShi
      Licensed under the GNU General Public License v3.0 (GPL-3.0)
@@ -12,8 +12,8 @@ F<!--
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="google-site-verification" content="f80bboVVkBBgR-FhZE" />
-    <title>WorkGroup-New Tab</title>
+    <meta name="google-site-verification" content="f80bboVVkBBgR-pRl_jZR6dnG7tuaYD4Fv4fSr3IhZE" />
+    <title>New Tab</title>
     <link href="style.css" rel="stylesheet">
     <link href="./favicon/icon48.png" id="favicon" rel="icon" type="image/png">
     <style id="iconStyle"></style>
@@ -68,7 +68,7 @@ F<!--
     <script src="locales/ur.js"></script>
     <script src="locales/de.js"></script>
     <script src="locales/fa.js"></script>
-
+    <script src="locales/ar_SA.js"></script>
 </head>
 
 <body>
@@ -97,7 +97,7 @@ F<!--
     <!-- Centered Icon Container -->
     <div id="todoContainer" class="todo-container" style="display: none;">
         <h2 id="todoListHeading">To Do List</h2>
-        <div class="searchbar-content">
+        <div class="addTaskCont">
             <input id="todoInput" placeholder="Add task..." type="text" autocomplete="off">
             <div class="searchControls">
                 <!-- Add Button -->
@@ -979,7 +979,7 @@ F<!--
                         <svg fill="none" height="100%" viewBox="0 0 30 30" width="100%"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_208_15)">
-                                <path class="lessDark" clip-rule="evenodd"
+                                <path class="lessDark targeted" clip-rule="evenodd"
                                     d="M30 0L0 0C16.5685 0 30 13.4315 30 30L30 0Z" fill="#FF429D" fill-rule="evenodd" />
                             </g>
                             <defs>
@@ -993,7 +993,7 @@ F<!--
                         <svg fill="none" height="100%" viewBox="0 0 30 30" width="100%"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_208_15)">
-                                <path class="lessDark" clip-rule="evenodd"
+                                <path class="lessDark targeted" clip-rule="evenodd"
                                     d="M30 0L0 0C16.5685 0 30 13.4315 30 30L30 0Z" fill="#FF429D" fill-rule="evenodd" />
                             </g>
                             <defs>
@@ -1210,8 +1210,7 @@ F<!--
                     <div class="tilesCont">
 
                         <!-- ----tiles----------- -->
-                        <!-- ----github 地址----------- -->
-                        <a class="tiles" href="https://github.com/">
+                        <a class="tiles" href="https://github.com/XengShi/materialYouNewTab">
                             <div class="icon">
                                 <svg height="100%" viewBox="0 0 20 20" width="100%" xmlns="http://www.w3.org/2000/svg">
                                     <path id="githab" class="bgLightTint"
@@ -1223,8 +1222,7 @@ F<!--
                         </a>
                         <!-- -----end of tiles-------- -->
                         <!-- ----tiles----------- -->
-                        <!-- ----反馈----------- -->
-                        <a class="tiles" href="https://gb.ooo">
+                        <a class="tiles" href="https://xengshi.github.io/materialYouNewTab/docs/feedback.html">
                             <div class="icon">
                                 <svg height="100%" viewBox="0 0 18 17" width="100%" xmlns="http://www.w3.org/2000/svg">
                                     <path id="sujhaw" class="bgLightTint" clip-rule="evenodd"
@@ -1548,24 +1546,20 @@ F<!--
                                 <span class="toggle"></span>
                             </label>
                         </div>
-                                    <!-- --- weather  天气--- -->
-                         
-                         <div class="ttcont unflex weather">
+
+                        <div class="ttcont unflex weather">
                             <div class="texts">
                                 <div class="bigText" id="WeatherApiText">Enter your WeatherAPI key</div>
                                 <div class="infoText" id="WeatherApiSubtext">If the weather functionality isn't working
                                 </div>
                             </div>
                             <input id="userAPI" placeholder="Your weatherAPI key" type="text">
-                                   <!-- --- Learn more  天气 了解更多 --- -->
-                                  <div class="bottom">
+                            <div class="bottom">
                                 <a href="https://xengshi.github.io/materialYouNewTab/docs/Get_WeatherAPI_Key.html"
-                                    id="LearnMoreButton" target="_blank">Learn more</a>       
+                                    id="LearnMoreButton" target="_blank">Learn more</a>
                                 <button class="savebtn" id="saveAPI">Save</button>
                             </div>
-                        </div>  
-
-                         
+                        </div>
                         <!-- ---🟡--- -->
                         <div class="ttcont">
                             <div class="texts">
@@ -1599,6 +1593,7 @@ F<!--
 
                         <!-- LANGUAGE SELECTION OPTIONS -->
                         <select class="languageSelector" id="languageSelector">
+                            <option value="ar_SA">Arabic (العربية)</option>
                             <option value="az">Azerbaijani (Azərbaycanca)</option>
                             <option value="bn">Bangla (বাংলা)</option>
                             <option value="zh">Chinese (Simplified) (简体中文)</option>
@@ -1821,26 +1816,6 @@ F<!--
     <div id="menuButton"></div>
     <!-- ending-of-body -->
 
-    <!--   JavaScript  target="_blank"  -->
-     <script>
-  function setLinksToBlank() {
-    document.querySelectorAll('a[href]:not([target="_blank"])').forEach(link => {
-      if (!/^(javascript:|mailto:|tel:|#)/.test(link.href)) {
-        link.target = '_blank';
-        link.rel = link.rel ? link.rel + ' noopener' : 'noopener';
-      }
-    });
-  }
-
-  // 初始设置
-  setLinksToBlank();
-  
-  // 监听动态内容变化（可选）
-  const observer = new MutationObserver(setLinksToBlank);
-  observer.observe(document.body, { childList: true, subtree: true });
-</script>
- <!--   JavaScript  target="_blank"  -->
 </body>
-       <!-- ------copyright ----------- -->
-  <!--  https://github.com/XengShi/materialYouNewTab   -->
+
 </html>
